@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bundle Delivery Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Screen 1: Cart Checkout -->
+<div class="app-container" id="screen1">
+    <h2>Cart Checkout</h2>
+    <p><img class="item-icon" src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"> Chips</p>
+    <p><img class="item-icon" src="https://cdn-icons-png.flaticon.com/512/135/135721.png"> Cold Drink</p>
+    <p><img class="item-icon" src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"> Ice Cream</p>
+    <p>Choose delivery option:</p>
+    <button class="instant" onclick="instantDelivery()">🚀 Instant Delivery<br>₹30, 10 mins</button>
+    <button class="bundle" onclick="bundleDelivery()">🌱 Bundle Delivery<br>₹10, +5-10 mins</button>
+</div>
+
+<!-- Screen 2: Bundle Confirmation -->
+<div class="app-container hidden" id="screen2">
+    <h2>Bundle Delivery Confirmed!</h2>
+    <p id="bundleMessage">Orders are bundled for your apartment.</p>
+    <p class="co2" id="co2Saved">You saved ₹0 and 0 kg CO₂!</p>
+    <p class="eco-score">Eco Score: <span id="ecoScoreDisplay">0</span> 🌱</p>
+    <button class="bundle" onclick="showMap()" id="trackBtn">Track Rider</button>
+</div>
+
+<!-- Screen 3: Rider Delivery -->
+<div class="app-container hidden" id="screen3">
+  <h2>Rider Delivery</h2>
+  <p>1 rider will deliver all orders in the apartment:</p>
+  <div class="apartment highlight-apartment-101">🏠 Apartment 101 - 3 orders</div>
+  <div class="apartment highlight-apartment-others">🏠 Apartment 102 - 2 orders</div>
+  <div class="apartment highlight-apartment-others">🏠 Apartment 103 - 1 order</div>
+
+  <div class="delivery-tracker">
+    <div class="header">On the way 🚴‍♂️</div>
+    <div class="map-line">
+      <div class="store">🏬</div>
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="apartment">🏡</div>
+    </div>
+    <p class="eta">Estimated Time: 8 mins</p>
+  </div>
+
+  <p class="rider">Rider delivering all orders efficiently! 🌱</p>
+  <button class="bundle" style="margin-top:15px;" onclick="showImpact()">Next</button>
+</div>
+
+<!-- Screen 4: Environmental Impact -->
+<div class="app-container hidden" id="screen4">
+    <h2>Environmental Impact</h2>
+    <div class="impact-box">
+        <p>🛵 Riders Saved</p>
+        <h3 id="ridersSaved">0 → 1</h3>
+    </div>
+    <div class="impact-box">
+        <p>🌱 CO₂ Saved</p>
+        <h3 id="co2Final">0 kg</h3>
+    </div>
+    <div class="impact-box">
+        <p>💰 Delivery Fee Saved</p>
+        <h3 id="feeSaved">₹0</h3>
+    </div>
+    <div class="impact-box">
+        <p>🌿 Eco Score</p>
+        <h3><span id="ecoScoreFinal">0</span> Points</h3>
+    </div>
+    <p style="margin-top:15px; font-weight:bold;">🌟 Choosing Bundle Delivery reduces emissions, traffic, and costs!</p>
+    <button class="bundle" onclick="restart()">Restart Demo</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
