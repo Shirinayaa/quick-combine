@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* App Container */
+.app-container {
+    width: 380px;
+    max-width: 95%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    color: #00796b;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 80%;
+}
+
+.instant {
+    background-color: #ff5252;
+    color: white;
+}
+
+.bundle {
+    background-color: #4caf50;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.co2 {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Apartment Boxes */
+.apartment {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.highlight-apartment-101 {
+    background-color: #dcedc8;
+    border: 2px solid #7cb342;
+    color: #33691e;
+}
+
+.highlight-apartment-others {
+    background-color: #f1f8e9;
+    border: 1.5px solid #9ccc65;
+    color: #558b2f;
+}
+
+.rider {
+    margin-top: 15px;
+    color: #1565c0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+img.item-icon {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.impact-box {
+    background-color: #e0f7fa;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.eco-score {
+    margin-top: 10px;
+    color: #388e3c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Delivery tracker */
+.delivery-tracker {
+    background: #f3e5f5;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.map-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.store, .apartment {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.progress {
+    flex: 1;
+    height: 10px;
+    background: #d1c4e9;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #6a1b9a;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
